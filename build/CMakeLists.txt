@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 11)
+project(AlgoBaby)
+include_directories(/Users/danielmccray/Desktop/Encryption/build/header_files/  /Users/danielmccray/Desktop/Encryption/build/implementaion_file)
+add_executable(AlgoBaby main.cpp header_files/encryption.h implementaion_file/encryption.cpp)

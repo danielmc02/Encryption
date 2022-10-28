@@ -1,0 +1,3 @@
+/Users/danielmccray/desktop/Encryption/build/CMakeFiles/AlgoBaby.dir
+/Users/danielmccray/desktop/Encryption/build/CMakeFiles/edit_cache.dir
+/Users/danielmccray/desktop/Encryption/build/CMakeFiles/rebuild_cache.dir
