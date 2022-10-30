@@ -4,7 +4,7 @@
 #include <ostream>
 #include "header_files/encryption.h"
 
-
+//using namespace encr;
 using namespace std;
 int main()
 {
@@ -22,5 +22,3 @@ int main()
 
 
 }
-//take user input
-// ie. "straight"

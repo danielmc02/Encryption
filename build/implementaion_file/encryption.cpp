@@ -34,18 +34,47 @@ namespace encr
     void encryptMessage()
     {
         cout << "Enter the message you want to encrypt: \n";
-         string tempUserInputMessage = "";
+        string tempUserInputMessage = "";
         cin.ignore();
         getline(cin, tempUserInputMessage);
-        
-                if(tempUserInputMessage[0] == 'd')
+        for(size_t i = 0; i < tempUserInputMessage.size(); ++i)
         {
-            tempUserInputMessage[0] = '1';
-            cout << tempUserInputMessage;
+            translate(tempUserInputMessage[i]);
         }
+        cout << "The final message is " << tempUserInputMessage;
         
+    // Daniel
+    //D
+    /**
+     * Notes: 
+     *  - All control characters (ranges from 0-31 on the asci table will be ignored for this algo)
+     *  - All captial characters on the asci table ranges from 65 - 90 (25)
+     *  - All lower letters on the asci tables range from 97 - 122 (50)
+     *  - Left over characters that are not letters range on the asci table from 123-126 (54)
+     *  - This means the workspace is of 54 characters
+    */
 
+    }
 
+     void translate(char& messageCharacter)
+     {
+       // cout << "translate was called";
+        int asciVal = getAsciiValue(messageCharacter);
+        if(asciVal % 2 == 0)
+        {
+            messageCharacter = 'a';
+        }
+        else
+        {
+             messageCharacter = 'z';
+        }
+   
+     }
+
+    int getAsciiValue(char& charValue)
+    {
+        int toAscii = int(charValue);
+        return toAscii;
     }
 
 
